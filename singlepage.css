@@ -1,0 +1,343 @@
+/*GENERAL*/
+
+@font-face {
+    font-family: CutAndPaste;
+    src: url(CutAndPaste.otf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    width: 100%;
+    min-height: 100%;
+    height: 500%;
+    display: flex;
+    flex-direction: column;
+    background-attachment:scroll;
+    background-image: url("/images/bck_img.JPG");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    background-color: rgb(201, 149, 250);
+}
+
+#nav {  
+    background-color: yellow;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    font-family: CutAndPaste;
+ }
+@media screen and (max-width: 767px) {
+    #mobnav { background-color: yellow; 
+              width: 100%; 
+              display: flex; 
+              flex-direction: row; 
+              justify-content: center; 
+              position: sticky; top: 0;}
+    
+    #menu {
+            background-color: yellow;
+            color: black;
+            font-family: CutAndPaste;
+            font-size: 2rem;
+            font-weight: bold;
+            border: none; 
+            position: sticky;
+            top: 0;
+    }
+
+    #subnav{
+        overflow: hidden;
+        width: 0;
+        position: fixed;
+        width: 100vw;
+        top: 0; left: 0;
+        background-color: yellow; opacity: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    
+        #subnav>button {
+        background-color: yellow;
+        color: black;
+        border: none;
+        font-family: sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        display: flex;
+        }
+        #close{
+            font-size: 4rem;
+        }
+
+    #nav{display: none;}
+}
+
+
+
+@media all and (min-width: 768px){ 
+    #nav {position: sticky;}
+    #subnav {display: none;}
+    #mobnav {display:none;}
+    }
+
+@media screen and (max-width: 767px) {
+    #pages{max-width: 100vw;}
+    body {background-attachment: scroll ; background-position: center center;}
+    .page{max-width: 100vw;}
+   
+}
+
+h1{
+    font-family: CutAndPaste;
+}
+
+#pages{height: 500%; width: 100%;}
+
+.page{height: 20%; width: 100%;}
+
+#first, #second, #third, #fourth, #fifth{
+    background-color: transparent; 
+    border: none; 
+    color: black;
+    padding: 0.5rem;
+    font-family: CutAndPaste;
+    font-size: 2rem;
+}
+
+#btndiv>button:hover{color: white;}
+
+#btndiv{margin-left: 15rem; }
+
+#ftr{
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 1rem;
+}
+
+/*PAGE 1 -GIF LOGO*/
+
+#page1 { 
+   background-color: transparent; 
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: CutAndPaste;
+   font-size: 2rem;
+ }
+
+/*PAGE 2 - ABOUT US*/
+
+#page2 { 
+   background-color: transparent;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ #page2>h1{color: rgb(137, 24, 66);
+
+}
+ #page2>p{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(137, 24, 66);
+    font-size: 1.5rem;
+    padding: 3rem;
+ }
+
+ /*PAGE 3 - LOCATION PHOTOS*/
+
+#page3 { 
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page3>h1{color: blue; padding-top: 4rem;}
+
+#photobox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
+@media screen and (max-width: 767px) {
+    #photobox{display: grid; grid-template-columns: 1fr 1fr; height: 20%;}
+    .photo>img{max-width: 100px;}
+}
+
+.photo>img{ border: solid 0.5rem blue; }
+.photo{padding: 0.5rem;
+}
+.photo>p{
+color: white;
+font-family: sans-serif;
+font-weight: bold;}
+
+a{text-decoration: none;}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden; -webkit-transform: translate3d(0,0,0);}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#a9a6a6; opacity: 0.5; filter: alpha(opacity = 50);}
+#colorbox{outline:0;}
+    #cboxContent{margin-top:32px; overflow:visible; background:blue;}
+        .cboxIframe{background:#a9a6a6;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{background:blue; padding:1px;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #cboxLoadingOverlay{background:blue;}
+        #cboxTitle{position:absolute; top:-22px; left:0; color:blue;}
+        #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url(images/controls.png) no-repeat 0 0;}
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxPrevious{background-position:0px 0px; right:44px;}
+        #cboxPrevious:hover{background-position:0px -25px;}
+        #cboxNext{background-position:-25px 0px; right:22px;}
+        #cboxNext:hover{background-position:-25px -25px;}
+        #cboxClose{background-position:-50px 0px; right:0;}
+        #cboxClose:hover{background-position:-50px -25px;}
+        .cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{right:66px;}
+        .cboxSlideshow_on #cboxSlideshow{background-position:-75px -25px; right:44px;}
+        .cboxSlideshow_on #cboxSlideshow:hover{background-position:-100px -25px;}
+        .cboxSlideshow_off #cboxSlideshow{background-position:-100px 0px; right:44px;}
+        .cboxSlideshow_off #cboxSlideshow:hover{background-position:-75px -25px;}
+  
+
+/*PAGE 4 - OUR TEAM*/
+
+#page4 { 
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: yellow;
+}
+
+#f1{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;}
+#f2{
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-left: 3rem;
+}
+
+#page4>h1{color: yellow;}
+
+#f1>img{border-radius: 300px;}
+#f2>img{border-radius: 300px; margin-left: 2rem;}
+#f3>img{border-radius: 50px;}
+
+@media screen and (max-width: 767px) {
+    #f2 {display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        margin-left: 0; padding:2rem;}
+
+    #f2>p{padding-bottom: 2rem;}
+}
+
+@media screen and (max-width: 767px){
+    #page2>p {font-size: 1rem;}
+    #page2>h1 {margin-top: 3rem;}
+    #page1>img {max-width: 100vw;}
+    #page2 { margin-top: 18rem;}
+    #page1 {font-size: 0.85rem;}
+    #page4{ margin-top: 40rem; max-width: 100%; font-size: 0.5rem; }
+    #f1, #f2 {font-size: 0.65rem; padding-top: 2rem;}
+    #f1>img, #f2>img {max-width: 100px;} 
+    } 
+
+/*PAGE 5 - CONTACT*/
+
+#page5 { 
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page5>h1 {color: white;}
+
+#contactdiv{display: flex;
+justify-content: center;
+padding-top: 3rem;}
+
+form{
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+input{height: 2rem;}
+
+#message{height: 5rem;}
+
+form>h1{color: white;
+font-family: sans-serif;}
+
+form>button{background-color: yellow;
+color: black;
+font-family: CutAndPaste;
+font-size: 1.5rem;}
+
